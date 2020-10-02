@@ -1,0 +1,15 @@
+version: 1.0
+metadata:
+  productId: jen
+  componentId: newman-slave
+  version: 1.0.0
+component:
+  type: jenkinsAgent
+automationTool:
+  name: make
+stages:
+  archive:
+    enabled: true
+    docker:
+      enabled: true
+      dockerfile: newman.Dockerfile
