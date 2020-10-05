@@ -11,14 +11,14 @@ FROM jenkins/inbound-agent:4.3-4
 
 # Install npm
 
-#RUN curl -sL https://deb.nodesource.com/setup_current.x | bash -
-#RUN apt-get clean && apt-get upgrade -y \
-#    && apt-get update -y --fix-missing \
-#    && apt-get -qqy --no-install-recommends install \
-#    nodejs
+RUN curl -sL https://deb.nodesource.com/setup_current.x | bash -
+RUN apt-get clean && apt-get upgrade -y \
+    && apt-get update -y --fix-missing \
+    && apt-get -qqy --no-install-recommends install \
+    nodejs
 
 # Set node version
-#ENV NODE_VERSION 8
+ENV NODE_VERSION 8
 
 # Set locale
 #ENV LC_ALL en_US.UTF-8
@@ -26,8 +26,8 @@ FROM jenkins/inbound-agent:4.3-4
 #ENV LANGUAGE en_US.UTF-8
 
 # Install node
-#RUN npm install -g n;
-#RUN n ${NODE_VERSION};
+RUN npm install -g n;
+RUN n ${NODE_VERSION};
 
 # Set newman version
 ENV NEWMAN_VERSION 3.9.2
