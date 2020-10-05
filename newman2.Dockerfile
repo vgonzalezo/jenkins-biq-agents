@@ -3,6 +3,7 @@
 #FROM docker.io/openshift/jenkins-agent-nodejs-8-centos7:v3.11
 FROM openshift/jenkins-slave-nodejs-centos7
 
+RUN node -v
 #LABEL image jenkins/inbound-agent:4.3-4
 #LABEL distro centos7
 
