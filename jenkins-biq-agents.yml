@@ -26,7 +26,7 @@ objects:
           name: 'jenkins-newman-agent:latest'
       strategy:
         dockerStrategy:
-          dockerfilePath: newman.Dockerfile
+          dockerfilePath: newman2.Dockerfile
   - kind: BuildConfig
     apiVersion: v1
     metadata:
