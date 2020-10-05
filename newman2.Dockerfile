@@ -7,7 +7,7 @@ FROM jenkins/inbound-agent:4.3-4
 #LABEL image jenkins/inbound-agent:4.3-4
 #LABEL distro centos7
 
-#USER root
+USER root
 
 # Install npm
 
