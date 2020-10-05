@@ -1,9 +1,9 @@
 #FROM debian:buster
-#FROM jenkins/inbound-agent:4.3-4
-FROM openshift/jenkins-agent-nodejs-8-centos7:v3.11
+FROM jenkins/inbound-agent:4.3-4
+#FROM openshift/jenkins-agent-nodejs-8-centos7:v3.11
 #FROM openshift/jenkins-slave-nodejs-centos7
 
-RUN node -v
+#RUN node -v
 #LABEL image jenkins/inbound-agent:4.3-4
 #LABEL distro centos7
 
@@ -26,8 +26,8 @@ RUN node -v
 #ENV LANGUAGE en_US.UTF-8
 
 # Install node
-RUN npm install -g n;
-RUN n ${NODE_VERSION};
+#RUN npm install -g n;
+#RUN n ${NODE_VERSION};
 
 # Set newman version
 ENV NEWMAN_VERSION 3.9.2
