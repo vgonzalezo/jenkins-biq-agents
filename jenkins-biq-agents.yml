@@ -1,7 +1,7 @@
 apiVersion: v1                                                                              
 kind: Template
 metadata:
-  name: Jenkins Agent Template
+  name: "Jenkins Agent Template"
 objects:
   - apiVersion: v1
     kind: ImageStream
