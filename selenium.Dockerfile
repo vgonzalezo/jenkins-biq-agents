@@ -47,14 +47,9 @@ ENV NODE_APPLICATION_NAME ""
 ENV GRID_DEBUG true
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
-
-
-RUN curl -sLO https://artifactory.tools.tbk.cl/artifactory/list/deb-virtual/pool/tbk-meta-repo_1-3_amd64.deb \
-    && dpkg -i tbk-meta-repo_1-3_amd64.deb \
-    && rm -rf tbk-meta-repo_1-3_amd64.deb
-#RUN  echo "deb http://deb.debian.org/debian sid main\n" > /etc/apt/sources.list \
-#    && echo "deb http://deb.debian.org/debian buster contrib\n" >> /etc/apt/sources.list \
-#    && echo "deb http://deb.debian.org/debian buster non-free\n" >> /etc/apt/sources.list 
+RUN  echo "deb http://deb.debian.org/debian sid main\n" > /etc/apt/sources.list \
+    && echo "deb http://deb.debian.org/debian buster contrib\n" >> /etc/apt/sources.list \
+    && echo "deb http://deb.debian.org/debian buster non-free\n" >> /etc/apt/sources.list 
 
 # No interactive frontend during docker build
 ENV DEBIAN_FRONTEND=noninteractive \
