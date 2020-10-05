@@ -15,7 +15,7 @@ RUN apt-get update -y \
 #    nodejs
 
 # Set node version
-ENV NODE_VERSION LATEST
+ENV NODE_VERSION latest
 
 # Set locale
 ENV LC_ALL en_US.UTF-8
