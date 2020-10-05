@@ -7,10 +7,6 @@ objects:
     kind: ImageStream
     metadata:
       name: jenkins-newman-agent
-  - apiVersion: v1
-    kind: ImageStream
-    metadata:
-      name: jenkins-selenium-agent
   - kind: BuildConfig
     apiVersion: v1
     metadata:
@@ -26,21 +22,5 @@ objects:
           name: 'jenkins-newman-agent:latest'
       strategy:
         dockerStrategy:
-          dockerfilePath: newman2.Dockerfile
-  - kind: BuildConfig
-    apiVersion: v1
-    metadata:
-      name: jenkins-selenium-agent
-    spec:
-      source:
-        git:
-          uri: "https://github.com/vgonzalezo/jenkins-biq-agents"
-          ref: master
-      output:
-        to:
-          kind: ImageStreamTag
-          name: 'jenkins-selenium-agent:latest'
-      strategy:
-        dockerStrategy:
-          dockerfilePath: selenium.Dockerfile
+          dockerfilePath: Dockerfile
 parameters: []
