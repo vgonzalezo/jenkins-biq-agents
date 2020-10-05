@@ -8,7 +8,7 @@ USER root
 # Install npm
 RUN curl -sL https://deb.nodesource.com/setup_current.x | bash -
 RUN apt-get update -y \
-    apt install nodejs -y
+    && apt install nodejs -y
 #RUN apt-get clean && apt-get upgrade -y \
 #    && apt-get update -y --fix-missing \
 #    && apt-get -qqy --no-install-recommends install \
