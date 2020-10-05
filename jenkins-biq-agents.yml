@@ -1,6 +1,8 @@
-apiVersion: v1beta3                                                                              
-kind: List                                                                                       
-items:    
+apiVersion: v1                                                                              
+kind: Template
+metadata:
+  name: Jenkins Agent Template
+objects:
   - apiVersion: v1
     kind: ImageStream
     metadata:
@@ -41,3 +43,4 @@ items:
       strategy:
         dockerStrategy:
           dockerfilePath: selenium.Dockerfile
+parameters: []
