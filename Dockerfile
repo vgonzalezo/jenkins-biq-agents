@@ -6,7 +6,7 @@ ENV NODEJS_VERSION=14 \
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_${NODEJS_VERSION}.x | bash -
 
-RUN INSTALL_PKGS="nodejs" && \
+RUN INSTALL_PKGS="nodejs Xvfb libXfont Xorg" && \
     yum install -y --setopt=tsflags=nodocs \
       $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \ 
