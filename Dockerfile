@@ -23,7 +23,7 @@ RUN INSTALL_PKGS="nodejs redhat-lsb libXScrnSaver xdg-utils liberation-fonts" &&
     rm -rf /var/cache/yum && \
     #npm install --unsafe-perm -g npm-audit-html npm-audit-ci-wrapper sonar-scanner || cat /home/jenkins/.npm/_logs/*-debug.log && \
     #chown root:root /home/jenkins -R && \
-    chmod 775 /home/jenkins/.config -R 
+    #chmod 775 /home/jenkins/.config -R 
     #&& \
     #chmod 775 /home/jenkins/.npm -R
 
