@@ -14,6 +14,6 @@ RUN INSTALL_PKGS="nodejs libXScrnSaver java-1.8.0-openjdk" && \
     yum clean all -y && \
     rm -rf /var/cache/yum && \
     wget -qc http://apache.stu.edu.tw//jmeter/binaries/apache-jmeter-5.2.1.tgz && \
-    tar -xf apache-jmeter-5.2.1.tgz $HOME/
+    tar -xf apache-jmeter-5.2.1.tgz -C $HOME/
 
 USER 1001
