@@ -2,7 +2,7 @@ FROM openshift/jenkins-slave-base-centos7:v3.11
 
 ENV JAVA_VERSION=11
 
-RUN yum remove jdk*
+RUN rpm -qa | grep openjdk | xargs  yum -y remove
 
 RUN INSTALL_PKGS="java-11-openjdk maven" && \
     yum install -y --setopt=tsflags=nodocs \
