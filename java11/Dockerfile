@@ -2,7 +2,7 @@ FROM openshift/jenkins-slave-base-centos7:v3.11
 
 ENV JAVA_VERSION=11
 
-RUN INSTALL_PKGS="openjdk11-jdk" && \
+RUN INSTALL_PKGS="java-11-openjdk" && \
     yum install -y --setopt=tsflags=nodocs \
       $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \ 
