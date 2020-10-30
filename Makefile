@@ -6,4 +6,7 @@ push:
 	docker push tsoftglobal/jenkins-biq-nodejs-agent
 	docker push tsoftglobal/jenkins-biq-java-agent
 
+alpine:
+	docker build -t tsoftglobal/alpine-test alpine/.
+	
 run: build push
