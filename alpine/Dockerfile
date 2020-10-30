@@ -18,8 +18,9 @@ RUN wget -qc https://downloads.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/
     tar -C /opt -zxf apache-maven-$MAVEN_VERSION-bin.tar.gz && \
     mv /opt/apache-maven-$MAVEN_VERSION /opt/mvn
 
+RUN chmod +x /opt/java
 RUN ls /opt
-RUN java -version
+RUN /opt/java/bin/java -version
 RUN mvn --version
 
 #EXPOSE 3000
