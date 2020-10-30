@@ -19,7 +19,9 @@ RUN wget -qc https://downloads.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/
     mv /opt/apache-maven-$MAVEN_VERSION /opt/mvn
 
 RUN ls /opt
+RUN java -version
 RUN mvn --version
+
 #EXPOSE 3000
 
 #ENTRYPOINT /wait && npm start
