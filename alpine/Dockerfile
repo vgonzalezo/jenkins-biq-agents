@@ -12,7 +12,8 @@ RUN apk add tar gzip
 
 RUN wget -qc https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz && \
     tar -C /opt -zxf openjdk-11+28_linux-x64_bin.tar.gz && \
-    mv /opt/jdk-11 /opt/java
+    mv /opt/jdk-11 /opt/java && \
+    ls /opt/java/bin
 
 RUN wget -qc https://downloads.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
     tar -C /opt -zxf apache-maven-$MAVEN_VERSION-bin.tar.gz
